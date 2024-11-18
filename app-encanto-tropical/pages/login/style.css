@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #98FB98, #2E8B57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  
+  .login-box {
+    background: #428d42;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .logo {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #006400;
+    color: #fff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #004d00;
+  }
+  
+  .forgot-password {
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+  
+  .user-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .user-type label {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 600px) {
+    .login-box {
+      padding: 1.5rem;
+    }
+  
+    button {
+      padding: 0.5rem;
+    }
+  }
+  
