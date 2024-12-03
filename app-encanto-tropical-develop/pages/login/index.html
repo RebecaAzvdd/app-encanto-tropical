@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login -  Encanto Tropical</title>
+    <link href="../../css/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+          <img src="../../assets/images/logo.png" alt="Encanto Tropical Logo" class="logo">
+          <h2>Fazer login</h2>
+          <form id="login-form">
+            <div class="user-type">
+              <label>
+                <input type="radio" name="userType" value="user" checked>
+                Usuário Normal
+              </label>
+              <label>
+                <input type="radio" name="userType" value="admin">
+                Administrador
+              </label>
+            </div>
+            <div class="input-group">
+              <label for="username">Usuário:</label>
+              <input type="text" id="username" placeholder="Digite seu usuário">
+            </div>
+            <div class="input-group">
+              <label for="password">Senha:</label>
+              <input type="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <div class="input-group" id="admin-token-group" style="display: none;">
+              <label for="admin-token">Token ADM:</label>
+              <input type="text" id="admin-token" placeholder="Digite o token">
+            </div>
+            <div class="remember-me">
+              <label>
+                <input type="checkbox" id="remember-me">
+                Lembrar-me
+              </label>
+            </div>
+            <button type="submit">Fazer login</button>
+          </form>
+          <a href="" class="forgot-password">Esqueci minha senha</a>
+        </div>
+      </div>
+      <script src="../../js/login.js"></script>
+</body>
+</html>
