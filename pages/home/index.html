@@ -9,13 +9,14 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../../assets/images/logo.png" alt="Encanto Tropical Logo">
-        </div>
+            <img id="logo-img" src="../../assets/images/logo.png" alt="Encanto Tropical Logo">
+        </div>        
         <nav class="navbar">
             <a href="../login/index.html" class="nav-link">Login</a>
             <a href="../perfil/index.html" class="nav-link">Perfil</a>
+            <button id="theme-toggle" class="theme-button">🌙</button>
         </nav>
-    </header>
+    </header>    
     <main class="main-content">
         <aside class="sidebar">
             <button class="sidebar-button" onclick="window.location.href='../home/index.html'">🏠</button>
@@ -60,9 +61,6 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <img src="../../assets/images/footer.png" alt="Footer Background">
-    </footer>
     <script src="../../js/product.js"></script> 
     <script src="../../js/home.js"></script>
 </body>

@@ -3,15 +3,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPriceElement = document.getElementById('summary-total');
     const subtotalElement = document.getElementById('summary-subtotal');
     const checkoutBtn = document.querySelector('.checkout-button');
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    // Carregar os itens do carrinho a partir do localStorage
+    // Verifica o estado salvo no localStorage e aplica o tema
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggleButton.textContent = '☀️';
+    }
+
+    // Alternância de tema
+    themeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            themeToggleButton.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggleButton.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Carrega os itens do carrinho a partir do localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Atualiza a interface do carrinho
     function updateCartUI() {
-        cartItemsSection.innerHTML = ''; // Limpa a lista de produtos
+        cartItemsSection.innerHTML = ''; // Limpa os itens exibidos
         let subtotal = 0;
 
-        // Itera pelos itens no carrinho e exibe cada um deles
         cart.forEach((item, index) => {
             const cartItemElement = document.createElement('div');
             cartItemElement.classList.add('cart-item');
@@ -22,50 +43,64 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>Preço: R$ ${item.price.toFixed(2)}</p>
                     <div>
                         Quantidade: 
-                        <button onclick="updateQuantity(${index}, -1)">-</button>
-                        ${item.quantity}
-                        <button onclick="updateQuantity(${index}, 1)">+</button>
+                        <button class="quantity-btn" data-index="${index}" data-delta="-1">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="quantity-btn" data-index="${index}" data-delta="1">+</button>
                     </div>
                 </div>
-                <button onclick="removeItem(${index})">Remover</button>
+                <button class="remove-btn" data-index="${index}">Remover</button>
             `;
             cartItemsSection.appendChild(cartItemElement);
 
-            subtotal += item.price * item.quantity;
+            subtotal += item.price * item.quantity; // Calcula o subtotal
         });
 
-        // Atualiza os valores do resumo
+        // Atualiza os valores no resumo
         subtotalElement.textContent = `R$ ${subtotal.toFixed(2)}`;
         totalPriceElement.textContent = `R$ ${subtotal.toFixed(2)}`;
     }
 
-    // Função para atualizar a quantidade de um item
-    window.updateQuantity = function (index, delta) {
+    // Atualiza a quantidade de um item
+    function updateQuantity(index, delta) {
         const item = cart[index];
-        if (item.quantity + delta > 0) { // Impede quantidade negativa
+        if (item.quantity + delta > 0) {
             item.quantity += delta;
             saveCart();
             updateCartUI();
         }
     }
 
-    // Função para remover um item do carrinho
-    window.removeItem = function (index) {
+    // Remove um item do carrinho
+    function removeItem(index) {
         cart.splice(index, 1);
         saveCart();
         updateCartUI();
     }
 
-    // Função para salvar o carrinho no localStorage
+    // Salva o carrinho no localStorage
     function saveCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Função para finalizar a compra (simulação)
-    checkoutBtn.addEventListener("click", () => {
-        alert("Finalizando a compra...");
+    // Finaliza a compra (simulação)
+    checkoutBtn.addEventListener('click', () => {
+        alert('Finalizando a compra...');
     });
 
-    // Inicializa a UI do carrinho
+    // Delegação de eventos para quantidade e remoção
+    cartItemsSection.addEventListener('click', (event) => {
+        const button = event.target;
+
+        if (button.classList.contains('quantity-btn')) {
+            const index = parseInt(button.dataset.index, 10);
+            const delta = parseInt(button.dataset.delta, 10);
+            updateQuantity(index, delta);
+        } else if (button.classList.contains('remove-btn')) {
+            const index = parseInt(button.dataset.index, 10);
+            removeItem(index);
+        }
+    });
+
+    // Inicializa a interface do carrinho
     updateCartUI();
 });

@@ -1,3 +1,6 @@
+*{
+  font-family: "Poppins", sans-serif;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +18,7 @@ body {
   }
   
   .login-box {
-    background: #428d42;
+    background: #58fa58;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -25,8 +28,9 @@ body {
   }
   
   .logo {
-    width: 80px;
-    margin-bottom: 1rem;
+      max-width: 400px; 
+      max-height: 100px; 
+      object-fit: contain; 
   }
   
   h2 {
@@ -99,4 +103,3 @@ body {
       padding: 0.5rem;
     }
   }
-  
