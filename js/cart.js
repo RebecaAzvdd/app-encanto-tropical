@@ -84,7 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Finaliza a compra (simulação)
     checkoutBtn.addEventListener('click', () => {
-        alert('Finalizando a compra...');
+        saveCart();
+        window.location.href = '../checkout/index.html';
     });
 
     // Delegação de eventos para quantidade e remoção

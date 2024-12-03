@@ -8,15 +8,21 @@
 </head>
 <body>
   <header class="header">
-    <div class="logo">
-      <img src="../../assets/images/logo.png" alt="Encanto Tropical" class="logo-image">
-    </div>
-    <nav class="menu">
-      <button class="menu-item"><i class="icon-user"></i></button>
-      <button class="menu-item"><i class="icon-menu"></i></button>
-      <button class="menu-item"><i class="icon-cart"></i></button>
-    </nav>
-  </header>
+        <div class="logo">
+            <img id="logo-img" src="../../assets/images/logo.png" alt="Encanto Tropical Logo">
+        </div>        
+        <nav class="navbar">
+            <a href="../login/index.html" class="nav-link">Login</a>
+            <a href="../perfil/index.html" class="nav-link">Perfil</a>
+            <button id="theme-toggle" class="theme-button">🌙</button>
+        </nav>
+    </header>    
+    <main class="main-content">
+        <aside class="sidebar">
+            <button class="sidebar-button" onclick="window.location.href='../home/index.html'">🏠</button>
+            <button class="sidebar-button" onclick="window.location.href='../carrinho/index.html'">🛒</button>
+            <button class="sidebar-button" onclick="window.location.href='../categorias/index.html'">c</button>
+        </aside>
   <main>
     <h1 class="title">Explorar</h1>
     <section class="banner">

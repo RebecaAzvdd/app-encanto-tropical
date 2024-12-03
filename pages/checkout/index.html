@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Encanto Tropical</title>
+    <script src="../../js/home.js"></script>
+    <script src="../../js/checkout.js"></script>
+    <link href="../../css/checkout.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img id="logo-img" src="../../assets/images/logo.png" alt="Encanto Tropical Logo">
+        </div>        
+        <nav class="navbar">
+            <a href="../login/index.html" class="nav-link">Login</a>
+            <a href="../perfil/index.html" class="nav-link">Perfil</a>
+            <button id="theme-toggle" class="theme-button">🌙</button>
+        </nav>
+    </header>    
+    <main class="main-content">
+        <aside class="sidebar">
+            <button class="sidebar-button" onclick="window.location.href='../home/index.html'">🏠</button>
+            <button class="sidebar-button" onclick="window.location.href='../carrinho/index.html'">🛒</button>
+            <button class="sidebar-button" onclick="window.location.href='../categorias/index.html'">c</button>
+        </aside>
+        <main class="checkout-main">
+            <section class="delivery-info">
+                <h2>Entrega para</h2>
+                <div id="delivery-details">
+                    <p>João Guilherme Carneiro de Souza</p>
+                    <p>R. Guilherme Pinto, 114 - Graças, Recife - PE, 52011-210, Brasil</p>
+                    <p>Chegada: 12 de dez. de 2024 - 16 de dez. de 2024</p>
+                    <button id="change-address">Alterar</button>
+                </div>
+            </section>
+            <section class="cart-summary">
+                <h2>Resumo da Compra</h2>
+                <div id="checkout-items"></div>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="checkout-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Frete:</span>
+                    <span id="checkout-shipping">R$ 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Total:</span>
+                    <span id="checkout-total">R$ 0,00</span>
+                </div>
+            </section>
+            <section class="payment-method">
+                <h2>Método de Pagamento</h2>
+                <p>Cartão de crédito terminado em 1503</p>
+                <button id="change-payment">Alterar</button>
+            </section>
+            <button id="confirm-order" class="confirm-button">Confirmar Pedido</button>
+        </main>        
+</body>
+</html>
