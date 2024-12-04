@@ -86,6 +86,28 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.add-to-cart {
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); 
+  }
+  
+  .add-to-cart:active {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);  
+  
+  }
 .summary-line {
     display: flex;
     justify-content: space-between;
