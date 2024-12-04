@@ -48,6 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Redireciona para a página inicial
-        window.location.href = "../../pages/home/index.html";
+        window.location.href = "pages/home/index.html";
     });
 });
