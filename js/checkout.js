@@ -40,4 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateCheckoutUI();
+    document.addEventListener("DOMContentLoaded", () => {
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+    
+        // Verificar o estado do tema e aplicar a classe correspondente
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggleButton.textContent = '🌞'; // Alterar o ícone para o modo diurno
+        }
+    
+        // Adicionar evento de clique para alternar entre os modos
+        themeToggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Atualizar o ícone
+            if (body.classList.contains('dark-mode')) {
+                themeToggleButton.textContent = '🌞'; // Modo diurno
+                localStorage.setItem('theme', 'dark'); // Salvar preferências no localStorage
+            } else {
+                themeToggleButton.textContent = '🌙'; // Modo noturno
+                localStorage.removeItem('theme'); // Remover preferência se o modo noturno for desativado
+            }
+        });
+    });
+    
 });

@@ -152,3 +152,100 @@ body {
 body.dark-mode .add-to-cart {
     color: #ffffff;
 }
+/* Modo Noturno */
+body.dark-mode {
+  background-color: #181616;
+  color: #f5f5f5;
+}
+
+body.dark-mode .header {
+  background: linear-gradient(to right, #333, #444);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #ddd;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: #fff;
+}
+
+body.dark-mode .sidebar {
+  background-color: #333;
+}
+
+body.dark-mode .sidebar-button {
+  color: #f5f5f5;
+}
+
+body.dark-mode .category {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f5f5f5;
+}
+
+body.dark-mode .banner-text {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .logo img {
+    max-width: 300px;
+    margin-left: 2rem;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr; 
+  }
+
+  .sidebar {
+    display: none; 
+  }
+
+  .banner-image {
+    width: 100%; 
+  }
+
+  .categories {
+    grid-template-columns: 1fr; 
+  }
+
+  .category {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+  }
+
+  .category {
+    font-size: 1.2rem;
+  }
+}
+

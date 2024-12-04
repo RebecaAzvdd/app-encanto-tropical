@@ -70,12 +70,12 @@ body {
 
 
 .profile {
+    display: flex;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-width: 800px;
     display: grid;
     justify-content: center;
 }

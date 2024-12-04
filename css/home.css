@@ -71,10 +71,11 @@ body {
 }
 
 .products {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-left: 50px;
+    margin-left: 17%;
     margin-top: 20px;
     margin-bottom: 20px;
     text-decoration: none;
