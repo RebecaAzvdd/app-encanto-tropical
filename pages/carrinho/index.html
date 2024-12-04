@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Encanto Tropical</title>
+    <link href="../../css/cart.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../../assets/images/logo.png" alt="Encanto Tropical Logo">
+        </div>
+        <nav class="navbar">
+            <a href="../login/index.html" class="nav-link">Login</a>
+            <a href="../perfil/index.html" class="nav-link">Perfil</a>
+            <a href="../cadastro/index.html" class="nav-link">Cadastro</a>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar">
+            <button class="sidebar-button" onclick="window.location.href='../home/index.html'">🏠</button>
+            <button class="sidebar-button">🛒</button>
+            <button class="sidebar-button" onclick="window.location.href='../categorias/index.html'">🌺</button>
+        </aside>
+        <section class="cart">
+            <h2>Meu Carrinho</h2>
+            <div class="cart-details"></div>
+            <div class="summary">
+                <h3>Resumo da Compra</h3>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="summary-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Frete:</span>
+                    <span>R$ 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Desconto:</span>
+                    <span>R$ 0</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="summary-total">R$ 0,00</span>
+                </div>
+                <button class="checkout-button">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/cart.js"></script> 
+</body>
+</html>

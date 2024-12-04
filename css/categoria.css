@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #64ff3e, #007200fd, #006b00);
+    color: white;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 400px; 
+    max-height: 100px; 
+    object-fit: contain; 
+    margin-left: 4rem;
+}
+
+
+.navbar .nav-link {
+    color: rgb(0, 26, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: #adadad;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #64ff3e;
+    padding: 1rem;
+}
+
+.sidebar-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+  
+  .title {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .banner-content {
+    position: relative;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  .category {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .category:hover {
+    transform: scale(1.05);
+  }
+  
+  .theme-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .body.dark-mode .theme-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  body.dark-mode .product p {
+    color: #ffffff;
+}
+body.dark-mode .add-to-cart {
+    color: #ffffff;
+}
+/* Modo Noturno */
+body.dark-mode {
+  background-color: #181616;
+  color: #f5f5f5;
+}
+
+body.dark-mode .header {
+  background: linear-gradient(to right, #333, #444);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #ddd;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: #fff;
+}
+
+body.dark-mode .sidebar {
+  background-color: #333;
+}
+
+body.dark-mode .sidebar-button {
+  color: #f5f5f5;
+}
+
+body.dark-mode .category {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f5f5f5;
+}
+
+body.dark-mode .banner-text {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .logo img {
+    max-width: 300px;
+    margin-left: 2rem;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr; 
+  }
+
+  .sidebar {
+    display: none; 
+  }
+
+  .banner-image {
+    width: 100%; 
+  }
+
+  .categories {
+    grid-template-columns: 1fr; 
+  }
+
+  .category {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+  }
+
+  .category {
+    font-size: 1.2rem;
+  }
+}
+

@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #64ff3e, #007200fd, #006b00);
+    color: white;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 400px; 
+    max-height: 100px; 
+    object-fit: contain; 
+    margin-left: 4rem;
+}
+
+.navbar .nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: #adadad;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #64ff3e;
+    padding: 1rem;
+}
+
+.sidebar-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.main-content {
+    display: grid;
+}
+
+.cart {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-details {
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cart-item-info .item-price {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.cart-item-info .item-quantity {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Summary */
+.summary {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.summary-line span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: #006400;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #004d00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .cart {
+        margin-bottom: 20px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cart-item-info {
+        margin-left: 0;
+    }
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .header {
+    background: linear-gradient(to right, #555, #555);
+}
+
+body.dark-mode .sidebar {
+    background-color: #555;
+}
+
+body.dark-mode .cart {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+}
+
+body.dark-mode .summary {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .checkout-button {
+    background-color: #444;
+}
+
+body.dark-mode .checkout-button:hover {
+    background-color: #666;
+}
+
+body.dark-mode h2{
+    color: white;}
+body.dark-mode h3{
+    color: white;}
+body.dark-mode h4{
+    color: white;}
+body.dark-mode span{
+    color: white;
+}
+.theme-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .body.dark-mode .theme-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 200px;
+  }
+.remove-btn{
+    background: none;
+    border: #121212;
+    cursor: pointer;
+    font-size: 16px;
+}
+.quantity-btn{
+    background: none;
+    border: black;
+    cursor: pointer;
+}
+.dark-mode .remove-btn{
+    color: white;
+}
+.dark-mode .quantity-btn{
+    color: white;
+}
